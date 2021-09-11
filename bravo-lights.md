@@ -81,6 +81,8 @@ Here are the addresses of the lights on the Bravo:
 
 Note that in theory you can show both the red and green light simultaneously for each gear position, producing an amber light. I don't know whether that's officially supported; it's _possible_ that, depending on the circuitry (e.g. if the two LEDs shared a current-limit resistor), that _could_ shorten the life of one or both of those LEDs, or it might be _completely_ fine. Remember that disclaimer at the top of the page?!
 
+![](./amber-gear.png)
+
 # Complex conditions
 
 As well as directly mapping a _single_ simulator variable condition to an LED, the configuration file supports combining conditions using `AND` (represented as `&&`) and `OR` (represented as `||`). Instead of using `Condition` and `ConditionValue`, we use `ConditionLogic` and `Conditions`. For example:
