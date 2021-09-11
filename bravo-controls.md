@@ -107,7 +107,7 @@ These are all 'momentary' switches that trigger only whilst the lever is held aw
 
 ## Levers
 
-These are the axes for the main levers:
+These are the analog axes for the main levers:
 
 |Axis name| Lever | MSFS Default Binding |
 |-|-|-|

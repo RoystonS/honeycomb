@@ -11,13 +11,13 @@ The `AFC_Bridge.exe` program installed by the Honeycomb driver installer reads f
 
 The AFC_Bridge is typically found in the MSFS `Community` folder, under `AFC_Bridge\bin`. In that folder you'll find `AFC_Bridge.exe` together with the configuration file for the Bravo: `BFC_Throttle_Config.json`.
 
-> The `Community` folder can be found in `%LOCALAPPDATA%\Packages\Microsoft.FlightSimulator_8wekyb3d8bbwe\LocalCache\Packages\` for Windows Store installations, `%LOCALAPPDATA%\Packages\Microsoft.FlightDashboard_8wekyb3d8bbwe\LocalCache\Packages\` for Steam installations, or elsewhere (e.g. `C:\FSData\Community` if you have specified a custom location)
+> The `Community` folder can be found in `%LOCALAPPDATA%\Packages\Microsoft.FlightSimulator_8wekyb3d8bbwe\LocalCache\Packages\` for Windows Store installations, `%LOCALAPPDATA%\Packages\Microsoft.FlightDashboard_8wekyb3d8bbwe\LocalCache\Packages\` for Steam installations, or elsewhere (e.g. `C:\FSData\Community`) if you have specified a custom location.
 
-The Honeycomb installer automatically configures MSFS to run `AFC_Bridge.exe` when it starts up via an entry in `exe.xml` in the `LocalCache` folder
+The Honeycomb installer automatically configures MSFS to run `AFC_Bridge.exe` when it starts up via an entry in `exe.xml` in the `LocalCache` folder.
 
 ## Addressing the lights
 
-Each light has a two-part address consisting of a 'ByteIndex' and a 'BitIndex'. There are 8 bits in each byte, numbered 0-7, and a total of 4 bits.
+Each light has a two-part address consisting of a 'ByteIndex' and a 'BitIndex'. There are 8 bits in each byte, numbered 0-7, and a total of 4 bytes.
 
 For example, the `ALT` autopilot button light is at byte 1, bit 4 and the `DOOR` annunciator light is at byte 4, bit 3.
 
@@ -118,7 +118,7 @@ Note that when you specify the name of a variable in the configuration file, it'
 
 ### Examples
 
-* `ENG ON FIRE:1, bool`
+* `A:ENG ON FIRE:1, bool`
 * `A:ELECTRICAL MAIN BUS VOLTAGE, volts`
 * `A:ELECTRICAL MAIN BUS AMPS, amperes`
 * `A:AUTOPILOT MASTER, percent over 100`
@@ -157,8 +157,8 @@ If instead you want the `ENGINE FIRE` annunciator light to light up if there's a
     {
       "Condition": "A:ENG ON FIRE:1, bool",
       "ConditionValue": "=1"
-	},
-	{
+	  },
+	  {
       "Condition": "A:ENG ON FIRE:2, bool",
       "ConditionValue": "=1"
     },
@@ -174,7 +174,7 @@ If instead you want the `ENGINE FIRE` annunciator light to light up if there's a
 }
 ```
 
-## Fix the Low volts indicator
+## Fix the low volts indicator
 
 The standard mapping for the `LOW VOLTS` light is:
 
