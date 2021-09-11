@@ -185,3 +185,7 @@ to
 | 41 | Switch 4 Down | _unbound_ |
 
 For me, this makes those buttons work.
+
+# Feedback
+
+If there's something in this document that's missing, incorrect, or unclear, please let me know by filing an issue in GitHub or submitting a pull request.
