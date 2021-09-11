@@ -107,6 +107,8 @@ These are all 'momentary' switches that trigger only whilst the lever is held aw
 
 ## Levers
 
+These are the axes for the main levers:
+
 |Axis name| Lever | MSFS Default Binding |
 |-|-|-|
 |L-Axis Y| Lever 1 | `THROTTLE 1 AXIS`|
@@ -115,6 +117,17 @@ These are all 'momentary' switches that trigger only whilst the lever is held aw
 |R-Axis Y| Lever 4 | `PROPELLER 2 AXIS`|
 |R-Axis X| Lever 5 | `MIXTURE 1 AXIS (-100 TO 100%)`|
 |L-Axis Z| Lever 6 | `MIXTURE 2 AXIS (-100 TO 100%)`|
+
+Pulling levers back beyond the 'Flight Detent' point acts as extra joystick buttons:
+
+| Button number| Control | MSFS Default Binding |
+|-|-|-|
+|24| Lever 1 | `THROTTLE 1 DECREASE`
+|25| Lever 2 | `THROTTLE 2 DECREASE`
+|26| Lever 3 | `TOGGLE FEATHER SWITCH 1`
+|27| Lever 4 | `TOGGLE FEATHER SWITCH 2`
+|28| Lever 5 | `DECREASE MIXTURE 1`
+|33| Lever 6 | `DECREASE MIXTURE 2`
 
 ## Lever buttons
 
