@@ -146,11 +146,13 @@ The default binding for button 20 (turning the knob to the `VS` setting ) is
 
 This should be changed to map _only_ to `SELECT VSI BUG` by removing the `SET AUTOPILOT VS HOLD` mapping.
 
-## Taxi and Nav lights
+Rmag has a good video from December 2020 walking through this in detail: https://www.youtube.com/watch?v=bJSBxbmC3Eo
 
-At least when I've been trying this out (September 2021, just after MSFS World Update 6) the default bindings for switches 1 (Beacon), 2 (Landing), 5-7 (Strobe, Pitot, Avionics) all work fine but switches 3 (Taxi) and 4 (Nav) don't. It seems to be the case that `TAXI LIGHTS ON`, `TAXI LIGHTS OFF`, `NAV LIGHTS ON` and `NAV LIGHTS OFF` don't work; they don't even work for me when bound to keyboard buttons.
+## Light switches not working
 
-The workaround is to use `SET TAXI LIGHTS` and `SET NAV LIGHTS` instead. These commands turn the lights on whilst the bound button remains pressed, and turns them off when it's released.
+At least when I've been trying this out (September 2021, just after MSFS World Update 6) some light switches haven't worked for me. Specifically, the default bindings for switches 1 (Beacon), 2 (Landing), 5-7 (Strobe, Pitot, Avionics) were all fine, but switches 3 (Taxi) and 4 (Nav) didn't work. It seems to be the case that `TAXI LIGHTS ON`, `TAXI LIGHTS OFF`, `NAV LIGHTS ON` and `NAV LIGHTS OFF` don't work at all; at least for me they didn't even work when bound to keyboard buttons. Others in the MSFS forums have reported issues with the Beacon lights too.
+
+The workaround is to use `SET xxx LIGHTS` instead of `xxx LIGHTS ON` and `xxx LIGHTS OFF`. These commands turn the lights on whilst the bound button remains pressed, and turns them off when it's released.  A small downside is that switches bound in this way take a second or so to respond when switched off instead of responding immediately.
 
 So, change:
 
@@ -169,4 +171,4 @@ to
 | 40 | Switch 4 Up | `SET NAV LIGHTS` |
 | 41 | Switch 4 Down | _unbound_ |
 
-For me, this makes those buttons work. However, switching the switches off has a roughly 1-second delay because MSFS has to notice that buttons 38 and 40 are no longer pressed rather than noticing that 39 & 40 have become pressed.
+For me, this makes those buttons work.
