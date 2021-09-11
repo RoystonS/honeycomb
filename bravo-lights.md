@@ -188,7 +188,7 @@ The standard mapping for the `LOW VOLTS` light is:
 ```
 
 There are two problems with this:
-1. It's checking the AMPS, not the VOLTS. There's obviously a relationship.
+1. It's checking the AMPS, not the VOLTS. There's obviously a relationship but `LOW VOLTS` should _probably_ be based on a voltage check?
 2. It's only turning the light on when the AMPS value is _exactly_ `0`.  Inspection of the actual variable value shows it at around `-4` for an idle throttle and an alternator on, and `-45` for alternator off.  Using `ELECTRICAL MAIN BUS VOLTAGE` instead we see around 23V for alternator off and 28V for alternator on.  So a better definition of a condition for `LOW VOLTS` would be checking for that variable being less than, say, 26V.
 
 So we replace the above with:
