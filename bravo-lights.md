@@ -13,7 +13,7 @@ The AFC_Bridge is typically found in the MSFS `Community` folder, under `AFC_Bri
 
 > The `Community` folder can be found in `%LOCALAPPDATA%\Packages\Microsoft.FlightSimulator_8wekyb3d8bbwe\LocalCache\Packages\` for Windows Store installations, `%LOCALAPPDATA%\Packages\Microsoft.FlightDashboard_8wekyb3d8bbwe\LocalCache\Packages\` for Steam installations, or elsewhere (e.g. `C:\FSData\Community`) if you have specified a custom location.
 
-The Honeycomb installer automatically configures MSFS to run `AFC_Bridge.exe` when it starts up via an entry in `exe.xml` in the `LocalCache` folder.
+The Honeycomb installer automatically configures MSFS to run `AFC_Bridge.exe` when it starts up via an entry in the MSFS `exe.xml` startup file. (Located either in the `LocalCache` folder or in `%APPDATA%\Microsoft Flight Simulator`.)
 
 ## Addressing the lights
 
