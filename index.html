@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Glory&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        font-family: "Glory", sans-serif;
+      }
+      #values {
+        font-family: monospace;
+        max-width: 800px;
+        display: flex;
+        flex-direction: row;
+      }
+      #values > * {
+        flex: 1 0 0;
+      }
+      footer {
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Honeycomb Bravo Disco!</h1>
+
+    <p id="msg"></p>
+    <button id="btn"></button>
+
+    <div id="values"></div>
+    <footer>
+      by <a href="https://github.com/RoystonS/honeycomb">RoystonS</a>
+    </footer>
+    <script src="disco.js"></script>
+  </body>
+</html>
