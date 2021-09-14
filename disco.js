@@ -157,7 +157,7 @@ async function party() {
   await bravo.sendFeatureReport(0, report);
 
   if (discoRunning) {
-    const delay = ((1023 - discoSpeed) / 1023) * 1000;
+    const delay = Math.log(1023 - discoSpeed) * 1000;
 
     setTimeout(party, delay);
   }
