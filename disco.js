@@ -48,7 +48,6 @@ async function makeConnection() {
   const filters = [{ vendorId: honeycombVendorId, productId: bravoProductId }];
 
   const result = await navigator.hid.requestDevice({ filters });
-  console.log("Result", result);
   if (result.length > 0) {
     bravo = result[0];
     listenToBravo();
@@ -163,8 +162,7 @@ async function party() {
   await bravo.sendFeatureReport(0, report);
 
   if (discoRunning) {
-    const delay = Math.log(1023 - discoSpeed) * 1000;
-
+    const delay = ((1023 - discoSpeed) / 1023) * 1000;
     setTimeout(party, delay);
   }
 }
