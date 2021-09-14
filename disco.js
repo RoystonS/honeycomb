@@ -14,6 +14,12 @@ const btn = document.getElementById("btn");
 const msgArea = document.getElementById("msg");
 
 async function main() {
+  if (!navigator.hid) {
+    msgArea.textContent = `Sorry, this web page is using very new USB HID access technology and your browser doesn't support it yet. Please try Chrome/Edge/Brave v89+ or Opera v76+.`;
+    btn.remove();
+    return;
+  }
+
   // Check if they have a Bravo and we already have permission.
   const allDevices = await navigator.hid.getDevices();
   const bravoDevices = allDevices.filter(
