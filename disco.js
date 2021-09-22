@@ -105,9 +105,6 @@ async function listenToBravo() {
         i <= 5 ? values[i].toString() : values[i].toString(2).padStart(8, "0");
     }
 
-    const buttonsPressed = [];
-    let buttonsPressedHTML = "";
-
     for (let i = 0; i < 6; i++) {
       const buttons = values[i + 6];
       for (let b = 0; b < 8; b++) {
@@ -153,8 +150,7 @@ function stopDisco() {
     "Push the flap lever down to start the disco! First (throttle) lever controls the disco speed.";
 }
 
-// Change this to false to allow amber gear lights
-let prohibitAmber = true;
+let prohibitAmber = !window.location.search.includes("allowAmber");
 
 async function party() {
   const bytes = discoRunning
