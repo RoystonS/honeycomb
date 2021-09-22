@@ -69,6 +69,14 @@ async function listenToBravo() {
     valueElements.push(elem);
     elementContainer.appendChild(elem);
   }
+  const buttonContainer = document.getElementById("buttonsPressed");
+  const buttonElements = [];
+  for (let i = 0; i < 48; i++) {
+    const elem = document.createElement("span");
+    elem.textContent = (i + 1).toString();
+    buttonElements.push(elem);
+    buttonContainer.appendChild(elem);
+  }
 
   bravo.addEventListener("inputreport", (event) => {
     const { data, device, reportId } = event;
@@ -97,12 +105,26 @@ async function listenToBravo() {
         i <= 5 ? values[i].toString() : values[i].toString(2).padStart(8, "0");
     }
 
+    const buttonsPressed = [];
+    let buttonsPressedHTML = "";
+
+    for (let i = 0; i < 6; i++) {
+      const buttons = values[i + 6];
+      for (let b = 0; b < 8; b++) {
+        const style = buttonElements[i * 8 + b].style;
+        const pressed = buttons & (1 << b);
+        style.backgroundColor = pressed ? "red" : "transparent";
+        style.color = pressed ? "white" : "inherit";
+      }
+    }
+
     if (values[7] & 0b01000000 && !discoRunning) {
       startDisco();
     }
     if (values[7] & 0b10000000 && discoRunning) {
       stopDisco();
     }
+
     discoSpeed = values[1];
   });
 

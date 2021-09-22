@@ -20,6 +20,15 @@
       #values > * {
         flex: 1 0 0;
       }
+      #buttonsPressed {
+        display: grid;
+        grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
+      }
+      #buttonsPressed > * {
+        margin: 2px;
+        padding: 4px;
+        text-align: right;
+      }
       footer {
         font-size: small;
       }
@@ -31,7 +40,12 @@
     <p id="msg"></p>
     <button id="btn"></button>
 
+    <h2>Raw values</h2>
     <div id="values"></div>
+
+    <h2>Buttons</h2>
+    <div id="buttonsPressed"></div>
+
     <footer>
       by <a href="https://github.com/RoystonS/honeycomb">RoystonS</a>
     </footer>
