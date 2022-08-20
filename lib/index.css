@@ -1,12 +1,15 @@
 /* src/ButtonDisplay.css */
 .buttonDisplay {
   display: grid;
-  grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
+  grid-template-columns: repeat(8, max-content);
+}
+.buttonDisplay .first-column {
+  grid-column-start: 1;
 }
 .buttonDisplay .button {
   margin: 2px;
   padding: 4px;
-  text-align: right;
+  text-align: center;
 }
 .buttonDisplay .button.on {
   background-color: red;
@@ -15,4 +18,8 @@
 .buttonDisplay .button.off {
   background-color: transparent;
   color: inherit;
+}
+.buttonNotes {
+  border-radius: 4px;
+  background-color: #e0e0e0;
 }

@@ -11,6 +11,7 @@
       html,
       body {
         font-family: "Glory", sans-serif;
+        margin: 0 8px;
       }
       .error {
         color: red;
@@ -24,14 +25,18 @@
         flex: 1;
         overflow-y: scroll;
       }
+      header,
       footer {
         flex: 0;
         font-size: small;
+        margin: 0 0 4px 0;
       }
     </style>
   </head>
   <body class="page">
-    <h1>Honeycomb Bravo Diagnostics & Disco!</h1>
+    <header>
+      <h1>Honeycomb Bravo Diagnostics & Disco!</h1>
+    </header>
 
     <div id="reactRoot" class="main"></div>
     <footer>
