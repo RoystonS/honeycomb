@@ -1,0 +1,18 @@
+.buttonDisplay {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
+}
+.buttonDisplay .button {
+  margin: 2px;
+  padding: 4px;
+  text-align: right;
+}
+.buttonDisplay .button.on {
+  background-color: red;
+  color: white;
+}
+
+.buttonDisplay .button.off {
+  background-color: transparent;
+  color: inherit;
+}

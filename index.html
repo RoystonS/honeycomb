@@ -6,49 +6,38 @@
       href="https://fonts.googleapis.com/css2?family=Glory&display=swap"
       rel="stylesheet"
     />
+    <link href="./lib/index.css" rel="stylesheet" />
     <style>
       html,
       body {
         font-family: "Glory", sans-serif;
       }
-      #values {
-        font-family: monospace;
-        max-width: 800px;
+      .error {
+        color: red;
+      }
+      .page {
+        height: 100vh;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
       }
-      #values > * {
-        flex: 1 0 0;
-      }
-      #buttonsPressed {
-        display: grid;
-        grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
-      }
-      #buttonsPressed > * {
-        margin: 2px;
-        padding: 4px;
-        text-align: right;
+      .main {
+        flex: 1;
+        overflow-y: scroll;
       }
       footer {
+        flex: 0;
         font-size: small;
       }
     </style>
   </head>
-  <body>
-    <h1>Honeycomb Bravo Disco!</h1>
+  <body class="page">
+    <h1>Honeycomb Bravo Diagnostics & Disco!</h1>
 
-    <p id="msg"></p>
-    <button id="btn"></button>
-
-    <h2>Raw values</h2>
-    <div id="values"></div>
-
-    <h2>Buttons</h2>
-    <div id="buttonsPressed"></div>
-
+    <div id="reactRoot" class="main"></div>
     <footer>
       by <a href="https://github.com/RoystonS/honeycomb">RoystonS</a>
     </footer>
-    <script src="disco.js"></script>
+
+    <script src="lib/index.js"></script>
   </body>
 </html>

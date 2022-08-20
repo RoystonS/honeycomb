@@ -1,0 +1,30 @@
+{
+  "name": "honeycomb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "disco.js",
+  "scripts": {
+    "build": "esbuild src/index.tsx --jsx=automatic --bundle --outfile=lib/index.js",
+    "dev": "esbuild src/index.tsx --jsx=automatic --bundle --outfile=lib/index.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoystonS/honeycomb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoystonS/honeycomb/issues"
+  },
+  "homepage": "https://github.com/RoystonS/honeycomb#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/w3c-web-hid": "^1.0.3",
+    "esbuild": "^0.15.5"
+  }
+}
